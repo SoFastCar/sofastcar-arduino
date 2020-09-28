@@ -2,6 +2,8 @@
 
 SoftwareSerial BTSerial(2, 3);
 
+int LightPin = 13;
+
 void setup() {
   Serial.begin(9600);
   BTSerial.begin(9600);
