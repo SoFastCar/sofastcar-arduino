@@ -5,9 +5,11 @@ SoftwareSerial BTSerial(2, 3);
 int LightPin = 13;
 
 void setup() {
+  // Bluetooth
   Serial.begin(9600);
   BTSerial.begin(9600);
-
+  // LED
+  pinMode(LightPin, OUTPUT);
 }
 
 void loop() {
@@ -16,10 +18,12 @@ void loop() {
     bt = BTSerial.read();
     switch (bt) {
       case 'a':
-        Serial.write(bt);
+        Serial.println(bt);
+        digitalWrite(LightPin, HIGH);
         break;  
       case 'b':
-        Serial.write(bt);
+        Serial.println(bt);
+        digitalWrite(LightPin, LOW);
         break;
       default:
         break;
