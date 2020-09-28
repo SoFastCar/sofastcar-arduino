@@ -3,6 +3,7 @@
 SoftwareSerial BTSerial(2, 3);
 
 int LightPin = 13;
+int speakerpin = 12;
 
 void setup() {
   // Bluetooth
@@ -24,6 +25,10 @@ void loop() {
       case 'b':
         Serial.println(bt);
         digitalWrite(LightPin, LOW);
+        break;
+      case 'c':
+        Serial.println(bt);
+         tone(speakerpin, 500, 1000);
         break;
       default:
         break;
