@@ -20,7 +20,12 @@ void loop() {
     switch (bt) {
       case 1:
         Serial.println(bt);
-        digitalWrite(LightPin, HIGH);
+        for (int i = 0; i < 5; i++) {
+          digitalWrite(LED_BUILTIN, HIGH);
+          delay(1000);                       
+          digitalWrite(LED_BUILTIN, LOW);    
+          delay(1000);
+        }
         break;  
       case 2:
         Serial.println(bt);
