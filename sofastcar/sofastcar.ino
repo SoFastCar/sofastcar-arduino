@@ -18,15 +18,15 @@ void loop() {
     char bt;
     bt = BTSerial.read();
     switch (bt) {
-      case 'a':
+      case 1:
         Serial.println(bt);
         digitalWrite(LightPin, HIGH);
         break;  
-      case 'b':
+      case 2:
         Serial.println(bt);
         digitalWrite(LightPin, LOW);
         break;
-      case 'c':
+      case 3:
         Serial.println(bt);
          tone(speakerpin, 500, 1000);
         break;
