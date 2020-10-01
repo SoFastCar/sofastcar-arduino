@@ -9,3 +9,4 @@
 
 ## Projcet
 - [iOS-Arduino 연결 테스트](https://youtu.be/pgaeHQ56xD0)
+- [SOFASTCAR-Arduino 연결 테스트](https://youtu.be/9i-E2824ebM)
