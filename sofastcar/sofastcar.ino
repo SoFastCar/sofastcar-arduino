@@ -20,11 +20,6 @@ void setup() {
   // Servo
   servo.attach(ServoPin);
   servo.write(Stop);
-  servo.write(Open);
-  delay(500);
-  servo.write(Close);
-  delay(500);
-  servo.write(Stop);
 }
 
 void loop() {
@@ -49,6 +44,14 @@ void loop() {
         Serial.println(bt);
          tone(SpeakerPin, 500, 1000);
         break;
+      case 4:
+        servo.write(Open);
+        delay(500);
+        servo.write(Stop);
+      case 5:
+        servo.write(Close);
+        delay(500);
+        servo.write(Stop);  
       default:
         break;
     }
