@@ -42,12 +42,12 @@ void loop() {
         break;
       case 3:
         servo.write(Open);
-        delay(500);
+        delay(250);
         servo.write(Stop);
         break;
       case 4:
         servo.write(Close);
-        delay(500);
+        delay(250);
         servo.write(Stop);
         break;
       default:
