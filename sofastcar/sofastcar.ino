@@ -38,20 +38,18 @@ void loop() {
         break;  
       case 2:
         Serial.println(bt);
-        digitalWrite(LightPin, LOW);
+        tone(SpeakerPin, 500, 1000);
         break;
       case 3:
-        Serial.println(bt);
-         tone(SpeakerPin, 500, 1000);
-        break;
-      case 4:
         servo.write(Open);
         delay(500);
         servo.write(Stop);
-      case 5:
+        break;
+      case 4:
         servo.write(Close);
         delay(500);
-        servo.write(Stop);  
+        servo.write(Stop);
+        break;
       default:
         break;
     }
