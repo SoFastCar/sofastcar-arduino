@@ -2,9 +2,14 @@
 #include <Servo.h>
 
 SoftwareSerial BTSerial(2, 3);
+Servo servo;
 
 int LightPin = 13;
 int SpeakerPin = 12;
+int ServoPin = 11;
+int Stop = 90;
+int Open = 180;
+int Close = 0;
 
 void setup() {
   // Bluetooth
@@ -12,6 +17,14 @@ void setup() {
   BTSerial.begin(9600);
   // LED
   pinMode(LightPin, OUTPUT);
+  // Servo
+  servo.attach(ServoPin);
+  servo.write(Stop);
+  servo.write(Open);
+  delay(500);
+  servo.write(Close);
+  delay(500);
+  servo.write(Stop);
 }
 
 void loop() {
