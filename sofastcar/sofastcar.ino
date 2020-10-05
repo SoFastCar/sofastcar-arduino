@@ -1,9 +1,10 @@
 #include<SoftwareSerial.h>
+#include <Servo.h>
 
 SoftwareSerial BTSerial(2, 3);
 
 int LightPin = 13;
-int speakerpin = 12;
+int SpeakerPin = 12;
 
 void setup() {
   // Bluetooth
@@ -33,7 +34,7 @@ void loop() {
         break;
       case 3:
         Serial.println(bt);
-         tone(speakerpin, 500, 1000);
+         tone(SpeakerPin, 500, 1000);
         break;
       default:
         break;
