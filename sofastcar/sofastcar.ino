@@ -4,7 +4,8 @@
 SoftwareSerial BTSerial(2, 3);
 Servo servo;
 
-int LightPin = 13;
+int RedPin = 6;
+int GreenPin = 7;
 int SpeakerPin = 12;
 int ServoPin = 11;
 int Stop = 90;
@@ -16,7 +17,10 @@ void setup() {
   Serial.begin(9600);
   BTSerial.begin(9600);
   // LED
-  pinMode(LightPin, OUTPUT);
+  pinMode(RedPin, OUTPUT);
+  pinMode(GreenPin, OUTPUT);
+  digitalWrite(6, HIGH); 
+  digitalWrite(7, HIGH); 
   // Servo
   servo.attach(ServoPin);
   servo.write(Stop);
@@ -30,9 +34,11 @@ void loop() {
       case 1:
         Serial.println(bt);
         for (int i = 0; i < 5; i++) {
-          digitalWrite(LED_BUILTIN, HIGH);
+          digitalWrite(6, LOW);
+          digitalWrite(7, LOW);
           delay(1000);                       
-          digitalWrite(LED_BUILTIN, LOW);    
+          digitalWrite(6, HIGH); 
+          digitalWrite(7, HIGH); 
           delay(1000);
         }
         break;  
