@@ -17,4 +17,4 @@
   <img width="180" height="320" src="./images/arduino_2nd.gif" alt="LOGIN_2nd" style="zoom: 100%;" />
 </P>
 
-*✔시연영상은 [youtube](https://youtu.be/W0kjmeD3b3g)에서 확인하실 수 있습니다.*
+*✔시연영상은 [youtube](https://www.youtube.com/playlist?list=PLYwpgjpU9h1R89lwtWDitPj995Cl91eok)에서 확인하실 수 있습니다.*
